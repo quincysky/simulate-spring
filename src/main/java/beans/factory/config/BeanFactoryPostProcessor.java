@@ -7,5 +7,5 @@ package beans.factory.config;
  * @create 2023 - 04 - 10 19:25
  */
 public interface BeanFactoryPostProcessor {
-    void postProcessBeanFactory()
+    void postProcessBeanFactory();
 }

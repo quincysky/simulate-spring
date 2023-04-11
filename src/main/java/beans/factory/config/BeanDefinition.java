@@ -6,6 +6,8 @@ import java.util.Objects;
 
 /**
  * BeanDefinition用于bean信息的类，包含bean的class类型、构造参数、属性值等信息。每个bean对应一个BeanDefinition实例。
+ * BeanDefinition包含了我们对bean做的配置，比如XML<bean/>标签的形式进行配置
+ * 换言之，Spring将我们对bean的定义信息进行了抽象，抽象后的实体就是BeanDefinition,并且Spring会以此作为标准来对Bean进行创建
  * @author quincy
  * @create 2023 - 04 - 10 15:43
  */

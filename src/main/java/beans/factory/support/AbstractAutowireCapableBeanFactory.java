@@ -258,11 +258,6 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
     }
 
     @Override
-    protected BeanDefinition getBeanDefinition(String beanName) throws BeansException {
-        return null;
-    }
-
-    @Override
     public Object applyBeanPostProcessorsBeforeInitialization(Object existingBean, String beanName) throws BeansException {
         Object result = existingBean;
         for (BeanPostProcessor processor : getBeanPostProcessors()) {

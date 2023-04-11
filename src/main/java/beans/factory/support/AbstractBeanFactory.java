@@ -76,10 +76,10 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 
     @Override
     public boolean containsBean(String name) {
-        return containBeanDefinition(name);
+        return containsBeanDefinition(name);
     }
 
-    protected abstract boolean containBeanDefinition(String beanName);
+    protected abstract boolean containsBeanDefinition(String beanName);
 
     protected abstract Object createBean(String beanName, BeanDefinition beanDefinition) throws BeansException;
 

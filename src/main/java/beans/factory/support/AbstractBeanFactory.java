@@ -5,7 +5,7 @@ import beans.factory.FactoryBean;
 import beans.factory.config.BeanDefinition;
 import beans.factory.config.BeanPostProcessor;
 import beans.factory.config.ConfigurableBeanFactory;
-import core.ConversionService;
+import core.convert.ConversionService;
 import util.StringValueResolver;
 
 import java.util.ArrayList;

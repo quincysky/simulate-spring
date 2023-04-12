@@ -1,4 +1,4 @@
-package core;
+package core.convert;
 
 /**
  * 如果要将一种Object类型转换成另一种Object类型只能使用ConversionService

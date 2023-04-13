@@ -44,8 +44,31 @@
             <scope>provided</scope>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.4</version>
+        </dependency>
 
     </dependencies>
+
+
+    <!--maven项目中有一个标准，其中src下的xml文件构建时不会被输出到target/classes目录下-->
+    <!--下面的含义: 除了标准的resource目录下，还将src/main/java下的xml文件也添加成资源(resource),因此构建时会输出到target/classed目录下-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
 
 </project>

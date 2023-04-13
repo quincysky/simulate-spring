@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="person" class="factory.Person">
+        <property name="name" value="derek"/>
+        <property name="car" ref="car"/>
+    </bean>
+
+    <bean id="car" class="factory.Car">
+        <property name="brand" value="porsche"/>
+    </bean>
+
+</beans>

@@ -4,12 +4,22 @@ import cn.hutool.core.io.IoUtil;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author quincy
  * @create 2023 - 04 - 12 21:25
  */
 public class ResoruceAndResourceLoaderTest {
+    static class OOMObject {}
+
+    public static void main(String[] args) {
+        List<OOMObject> list = new ArrayList<OOMObject>();
+        while (true) {
+            list.add(new OOMObject());
+        }
+    }
     @Test
     public void testResourceLoader() throws Exception {
         DefaultResourceLoader resourceLoader = new DefaultResourceLoader();

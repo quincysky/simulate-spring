@@ -100,7 +100,7 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
             // 在设置bean属性之前，允许BeanPostProcessor修改属性值
             applyBeanPostProcessorsBeforeApplyingPropertyValues(beanName, bean, beanDefinition);
 
-            // 为bean填充属性
+            // 为bean填充属性，
             applyPropertyValues(beanName, bean, beanDefinition);
 
             // 执行bean的初始方法和BeanPostProcessor的前置和后置处理方法。
@@ -142,7 +142,7 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
 
     /**
      *
-     * 为bean填充属性
+     * 为bean填充属性, 注意属性注入是要优先于初始化方法的。
      * 利用Hutool工具
      *
      * @param beanName
@@ -204,13 +204,20 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
     }
 
 
+    /**
+     * 初始化bean, 此处包含定义的初始化方法，并在初始化方法前后分别执行PostProcessor的前后置条件
+     * @param beanName
+     * @param bean
+     * @param beanDefinition
+     * @return
+     */
     protected Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
         if (bean instanceof BeanFactoryAware) {
             ((BeanFactoryAware) bean).setBeanFactory(this);
         }
 
         // 执行BeanPostProcessor的前置处理
-        Object wrappedBean = applyBeanPostProcessorsAfterInitialization(bean, beanName);
+        Object wrappedBean = applyBeanPostProcessorsBeforeInitialization(bean, beanName);
 
         try {
             invokeInitMethods(beanName, wrappedBean, beanDefinition);

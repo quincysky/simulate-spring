@@ -1,11 +1,19 @@
 package beans.factory.config;
 
+import beans.factory.ConfigurableListableBeanFactory;
+
 /**
- * 允许自定义修改BeanDefinition的属性值。用于在Bean初始化前后插入我们的逻辑(Bean增强、Bean代理等)
+ * BeanFactoryProcessor是Spring提供的容器扩展机制，允许我们在bean实例化之前修改bena的定义信息即BeanDefinition的信息
  *
  * @author quincy
  * @create 2023 - 04 - 10 19:25
  */
 public interface BeanFactoryPostProcessor {
-    void postProcessBeanFactory();
+
+    /**
+     * 在所有BeanDefinition加载完成后，但在bean实例化之前，提供修改BeanDefinition属性值的机制
+     *
+     * @param beanFactory
+     */
+    void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory);
 }

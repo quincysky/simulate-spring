@@ -5,6 +5,8 @@ import beans.PropertyValues;
 import beans.factory.config.BeanDefinition;
 import beans.factory.config.BeanReference;
 import beans.factory.support.DefaultListableBeanFactory;
+import entity.Car;
+import entity.Person;
 import org.junit.Test;
 
 /**

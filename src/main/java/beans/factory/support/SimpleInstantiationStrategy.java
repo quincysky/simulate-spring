@@ -14,6 +14,7 @@ public class SimpleInstantiationStrategy implements InstantiationStrategy{
 
     /**
      * 简单的bean实例化策略，根据bean的无参构造函数实例化对象。
+     * 注意如果使用简单化的实例化策略，那么生成的实例化对象使用instanceof (该类实现的接口) 将会返回false.
      * @param beanDefinition
      * @return
      * @throws BeansException

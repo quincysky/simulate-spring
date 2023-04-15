@@ -1,5 +1,6 @@
 package core.io;
 
+import beans.factory.DisposableBean;
 import cn.hutool.core.io.IoUtil;
 import org.junit.Test;
 

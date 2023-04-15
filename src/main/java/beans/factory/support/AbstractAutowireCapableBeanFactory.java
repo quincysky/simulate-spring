@@ -1,10 +1,10 @@
 package beans.factory.support;
 
 import beans.BeansException;
-import beans.DisposableBean;
 import beans.PropertyValue;
 import beans.PropertyValues;
 import beans.factory.BeanFactoryAware;
+import beans.factory.DisposableBean;
 import beans.factory.InitializingBean;
 import beans.factory.ObjectFactory;
 import beans.factory.config.*;
@@ -233,7 +233,7 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
     }
 
     /**
-     * 执行bean的初始化方法
+     * 执行bean的初始化方法(目前是支持两种：在xml文件中定义init-method; 实现InitializingBean接口)
      * @param beanName
      * @param bean
      * @param beanDefinition
@@ -254,6 +254,12 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
         }
     }
 
+    /**
+     * 注册有销毁方法的bean, 即为继承自DisposableBean或有自定义的销毁方法
+     * @param beanName
+     * @param bean
+     * @param beanDefinition
+     */
     protected void registerDisposableBeanIfNecessary(String beanName, Object bean, BeanDefinition beanDefinition) {
         // 只有singleton类型bean会执行销毁方法
         if (beanDefinition.isSingleton()) {

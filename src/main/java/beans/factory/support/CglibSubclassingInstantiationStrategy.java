@@ -6,6 +6,9 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 
 /**
+ * CGLib的通用写法， setSuperclass表示设置要代理的类，setCallback表示设置回调MethodInterceptor的实现类，使用create()方法生成一个代理对象。
+ *
+ * 注意此处的CGLib和jdk17已经不兼容
  * @author quincy
  * @create 2023 - 04 - 10 21:06
  */

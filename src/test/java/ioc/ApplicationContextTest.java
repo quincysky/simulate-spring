@@ -1,7 +1,8 @@
 package ioc;
 
 import context.support.ClassPathXmlApplicationContext;
-import factory.Person;
+import entity.Car;
+import entity.Person;
 import org.junit.Test;
 
 /**
@@ -12,9 +13,12 @@ public class ApplicationContextTest {
 
     @Test
     public void testApplicationContext() throws Exception {
+
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
 
         Person person = applicationContext.getBean("person", Person.class);
         System.out.println(person);
+        applicationContext.close();
     }
+
 }

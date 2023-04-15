@@ -4,6 +4,7 @@ import beans.PropertyValue;
 import beans.PropertyValues;
 import beans.factory.config.BeanDefinition;
 import beans.factory.support.DefaultListableBeanFactory;
+import entity.Person;
 import org.junit.Test;
 
 /**

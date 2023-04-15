@@ -2,7 +2,7 @@ package common;
 
 import beans.BeansException;
 import beans.factory.config.BeanPostProcessor;
-import factory.Car;
+import entity.Car;
 
 /**
  * @author quincy

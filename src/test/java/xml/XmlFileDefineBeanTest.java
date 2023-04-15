@@ -3,7 +3,7 @@ package xml;
 import beans.factory.support.DefaultListableBeanFactory;
 import beans.factory.xml.XmlBeanDefinitionReader;
 import core.io.DefaultResourceLoader;
-import factory.Person;
+import entity.Person;
 import org.junit.Test;
 
 /**

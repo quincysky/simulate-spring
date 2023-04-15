@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-    <bean id="person" class="factory.Person">
+    <bean id="person" class="entity.Person" init-method="customInit" destroy-method = "customDestroy">
         <property name="name" value="derek"/>
         <property name="car" ref="car"/>
     </bean>
 
-    <bean id="car" class="factory.Car">
+    <bean id="car" class="entity.Car">
         <property name="brand" value="porsche"/>
     </bean>
 

@@ -19,8 +19,10 @@ public class BeanDefinition {
 
     private PropertyValues propertyValues;
 
+    // 针对在xml文件中指定初始化方法
     private String initMethodName;
 
+    // 针对在xml文件中指定销毁方法
     private String destroyMethodName;
 
     private String scope = SCOPE_SINGLETON;

@@ -1,7 +1,7 @@
 package beans.factory.support;
 
 import beans.BeansException;
-import beans.DisposableBean;
+import beans.factory.DisposableBean;
 import beans.factory.ObjectFactory;
 import beans.factory.config.SingletonBeanRegistry;
 

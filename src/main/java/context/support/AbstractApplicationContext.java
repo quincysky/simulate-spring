@@ -173,6 +173,9 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
     }
 
 
+    /**
+     * 为了确保销毁方法在虚拟机关闭之前执行，向虚拟机中注册一个钩子函数
+     */
     public void registerShutdownHook() {
         Thread shutdownHook = new Thread() {
            public void run() {

@@ -5,8 +5,8 @@ import beans.factory.xml.XmlBeanDefinitionReader;
 import common.CustomBeanFactoryPostProcessor;
 import common.CustomerBeanPostProcessor;
 import core.io.DefaultResourceLoader;
-import factory.Car;
-import factory.Person;
+import entity.Car;
+import entity.Person;
 import org.junit.Test;
 
 /**

@@ -240,6 +240,7 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
      * @throws Throwable
      */
     protected void invokeInitMethods(String beanName, Object bean, BeanDefinition beanDefinition) throws Throwable {
+        // 此处如果bean对应的类实现了BeanFactoryAware接口，要进行设置。
         if (bean instanceof InitializingBean) {
             ((InitializingBean) bean).afterPropertiesSet();
         }

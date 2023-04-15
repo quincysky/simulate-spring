@@ -10,4 +10,6 @@
         <property name="brand" value="porsche"/>
     </bean>
 
+    <bean id = "helloService" class="entity.HelloService"/>
+
 </beans>

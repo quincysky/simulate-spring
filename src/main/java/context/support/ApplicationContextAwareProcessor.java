@@ -7,6 +7,7 @@ import context.ApplicationContextAware;
 
 /**
  * 能够感知ApplicationContext的后置器
+ * 在AbstractApplicationContext#refresh方法中加入到BeanFactory中，在前置处理中为bean设置所属的ApplicationContext
  * @author quincy
  * @create 2023 - 04 - 14 14:15
  */

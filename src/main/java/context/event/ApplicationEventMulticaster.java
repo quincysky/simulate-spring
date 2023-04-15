@@ -4,6 +4,7 @@ import context.ApplicationEvent;
 import context.ApplicationListener;
 
 /**
+ * 该接口是注册监听器和发布事件的抽象接口
  * ApplicationEventMulticaster接口实现类可以管理多个ApplicationListener监听器对象，并且发布事件到监听器
  * ApplicationEventMulticaster其实是ApplicationEventPublisher发布事件的代理类
  * @author quincy

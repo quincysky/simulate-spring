@@ -31,7 +31,7 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
         SUPPORTED_PRIMITIVES.add(PointcutPrimitive.EXECUTION);
     }
 
-
+    // PointcutExpression是一个用于匹配AOP切面中执行方法的表达式。它用于描述切点的模式，可以通过语法定义哪些方法应该被包含在切点中。
     private final PointcutExpression pointcutExpression;
 
     public AspectJExpressionPointcut(String expression) {

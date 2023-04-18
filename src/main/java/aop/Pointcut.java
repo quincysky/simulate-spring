@@ -1,7 +1,7 @@
 package aop;
 
 /**
- * 切点抽象
+ * Pointcut用于捕获JoinPoint
  *
  * @author quincy
  * @create 2023 - 04 - 16 14:27

@@ -7,6 +7,7 @@ import java.io.ObjectStreamException;
 
 /**
  * BeanPostProcessor的子类，用于Bean实例化前后的处理。
+ * 如果InstantiationAwareBeanPostProcessor处理阶段返回代理对象，会导致短路，不会继续走原来的创建bean的流程
  *
  * Initialization是初始化的意思， Instantiation是实例化的意思
  * 在Bean生命周期中，实例化指的是创建Bean的过程，初始化指的是Bean创建后，对其属性进行赋值，后置处理等操作的过程

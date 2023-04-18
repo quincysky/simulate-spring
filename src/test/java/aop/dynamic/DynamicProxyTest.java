@@ -1,18 +1,13 @@
 package aop.dynamic;
 
 import aop.*;
-import aop.adapter.MethodBeforeAdviceInterceptor;
-import aop.aspectj.AspectJExpressionPointcut;
+import aop.framework.adapter.MethodBeforeAdviceInterceptor;
 import aop.aspectj.AspectJExpressionPointcutAdvisor;
 import aop.framework.CglibAopProxy;
 import aop.framework.JdkDynamicAopProxy;
 import aop.framework.ProxyFactory;
-import beans.BeansException;
-import cn.hutool.extra.tokenizer.Word;
 import common.WorldServiceBeforeAdvice;
 import common.WorldServiceInterceptor;
-import org.aspectj.apache.bcel.ExceptionConstants;
-import org.aspectj.weaver.World;
 import org.junit.Before;
 import org.junit.Test;
 import service.WorldService;

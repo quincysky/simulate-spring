@@ -1,4 +1,4 @@
-package aop.adapter;
+package aop.framework.adapter;
 
 import aop.BeforeAdvice;
 import aop.MethodBeforeAdvice;

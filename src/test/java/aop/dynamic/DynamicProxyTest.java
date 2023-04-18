@@ -8,9 +8,11 @@ import aop.framework.CglibAopProxy;
 import aop.framework.JdkDynamicAopProxy;
 import aop.framework.ProxyFactory;
 import beans.BeansException;
+import cn.hutool.extra.tokenizer.Word;
 import common.WorldServiceBeforeAdvice;
 import common.WorldServiceInterceptor;
 import org.aspectj.apache.bcel.ExceptionConstants;
+import org.aspectj.weaver.World;
 import org.junit.Before;
 import org.junit.Test;
 import service.WorldService;
@@ -63,6 +65,20 @@ public class DynamicProxyTest {
         factory.setProxyTargetClass(true);
         proxy = factory.getProxy();
         ((WorldService) proxy).explode();
+    }
+
+    @Test
+    public void testBeforeAdvice() throws Exception {
+        // 设置BeforeAdvice
+        String expression = "execution(* service.WorldService.explode(..))";
+        AspectJExpressionPointcutAdvisor advisor = new AspectJExpressionPointcutAdvisor();
+        advisor.setExpression(expression);
+        MethodBeforeAdviceInterceptor methodBeforeAdviceInterceptor = new MethodBeforeAdviceInterceptor(new WorldServiceBeforeAdvice());
+        advisor.setAdvice(methodBeforeAdviceInterceptor);
+        advisedSupport.addAdvisor(advisor);
+        ProxyFactory factory = (ProxyFactory) advisedSupport;
+        WorldService proxy = (WorldService)factory.getProxy();
+        proxy.explode();
     }
 
     @Test

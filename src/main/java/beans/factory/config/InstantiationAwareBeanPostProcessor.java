@@ -19,7 +19,7 @@ import java.io.ObjectStreamException;
 public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor{
 
     /**
-     * 在bean实例化之前
+     * 在bean实例化之前调用，如果该方法返回是非Null对象，则Spring容器将使用该对象作为bean实例，而不是常见新的bean实例。
      * @param beanClass
      * @param beanName
      * @return

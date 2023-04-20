@@ -11,8 +11,6 @@
         <property name="location" value="classpath:car.properties"/>
     </bean>
 
-    <bean class="beans.factory.annotation.AutowiredAnnotationBeanProcessor"/>
-
     <context:component-scan  base-package="bean"/>
 
 </beans>

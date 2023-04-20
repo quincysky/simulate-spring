@@ -22,7 +22,7 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
     // 二级缓存 完成实例化，但是还没进行属性注入及初始化的对象
     private Map<String, Object> earlySingletonObjects = new HashMap<>();
 
-    // 三级缓存 提前暴露的一个单例工厂，二级缓存中存储的就是从这个工厂中获得到的对象
+    // 三级缓存 提前暴露的一个单例工厂，二级缓存中存储的就是从这个工厂中获得到的对象,解决有代理对象的循环依赖问题
     private Map<String, ObjectFactory<?>> singletonFactories = new HashMap<String, ObjectFactory<?>>();
 
     private final Map<String, DisposableBean> disposableBeans = new HashMap<>();

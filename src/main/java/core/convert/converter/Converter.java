@@ -1,4 +1,4 @@
-package core.convert;
+package core.convert.converter;
 
 /**
  * 类型转换接口抽象

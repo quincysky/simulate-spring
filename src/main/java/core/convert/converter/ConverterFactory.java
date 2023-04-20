@@ -1,4 +1,6 @@
-package core.convert;
+package core.convert.converter;
+
+import core.convert.converter.Converter;
 
 /**
  * 类型转换工厂

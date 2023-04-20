@@ -4,7 +4,6 @@ import beans.BeansException;
 import beans.factory.ConfigurableListableBeanFactory;
 import beans.factory.config.BeanFactoryPostProcessor;
 import beans.factory.config.BeanPostProcessor;
-import beans.factory.config.ConfigurableBeanFactory;
 import context.ApplicationEvent;
 import context.ApplicationListener;
 import context.ConfigurableApplicationContext;

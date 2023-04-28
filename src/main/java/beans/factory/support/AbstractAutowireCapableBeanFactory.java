@@ -180,7 +180,7 @@ public abstract  class AbstractAutowireCapableBeanFactory extends AbstractBeanFa
 
     /**
      * 循环依赖问题
-     *
+     * <p>
      * Spring解决循环依赖是有前置条件的：①出现循环依赖的Bean必须是单例  ②依赖注入的方式不能全是构造器注入的方法
      *
      * @param beanName

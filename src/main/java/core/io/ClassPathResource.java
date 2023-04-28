@@ -7,7 +7,7 @@ import java.io.InputStream;
 /**
  * classpath下的资源
  *
- * path不以'/'开头时，则默认是从此类所在的包下取资源
+ * path不以'/'开头时，则默认是从类路径的包下取资源
  * 如果以'/'开头则是从ClassPath根下获取。
  *
  * @author quincy

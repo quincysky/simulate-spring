@@ -31,7 +31,7 @@ public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPos
     private Set<Object> earlyProxyReferences = new HashSet<>();
 
     /**
-     * 如果代理工厂中的advisor非空则返回代理类，并将与该对象相匹配的adiosr加入到代理中
+     * 如果代理工厂中的advisor非空则返回代理类，并将与该对象相匹配的advisor加入到代理中
      * 否则还是返回对象本身。
      * @param bean
      * @param beanName
